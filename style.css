@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(239,68,68,.18), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(59,130,246,.15), transparent 30%),
+    #020617;
+  padding: 30px 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  margin: auto;
+}
+
+/* TOP BADGE */
+
+.top-badge {
+  width: fit-content;
+  margin: auto;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50px;
+  background: rgba(255,255,255,.06);
+  color: #fca5a5;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 45px 10px 35px;
+}
+
+.logo {
+  width: 78px;
+  height: 78px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background: linear-gradient(135deg,#ff3333,#991b1b);
+  font-size: 36px;
+  box-shadow: 0 0 45px rgba(239,68,68,.45);
+}
+
+h1 {
+  margin: 22px 0 12px;
+  font-size: clamp(38px,7vw,70px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+h1 span {
+  color: #ef4444;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* TOOL CARD */
+
+.tool-card {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 70px rgba(0,0,0,.4);
+}
+
+.input-label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #cbd5e1;
+}
+
+input {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  outline: none;
+  background: #020617;
+  color: white;
+  font-size: 15px;
+  transition: .3s;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+input:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239,68,68,.12);
+}
+
+button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 17px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#ef4444,#b91c1c);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 10px 30px rgba(239,68,68,.25);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(239,68,68,.4);
+}
+
+/* VIDEO */
+
+#result {
+  margin-top: 25px;
+}
+
+.video-box {
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(0,0,0,.35);
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: none;
+  border-radius: 14px;
+}
+
+.watch-button {
+  display: block;
+  margin-top: 12px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #ef4444;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  color: #fca5a5;
+  text-align: center;
+}
+
+/* FEATURES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.feature {
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.feature div {
+  font-size: 25px;
+}
+
+.feature h3 {
+  margin: 12px 0 7px;
+}
+
+.feature p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* HOW IT WORKS */
+
+.info {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.info h2,
+.about h2 {
+  font-size: 28px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.step {
+  padding: 25px;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.step span {
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.step h3 {
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ABOUT */
+
+.about {
+  margin-top: 
+  .logo {
+  width: 78px !important;
+  height: 78px !important;
+  margin: 0 auto 20px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: linear-gradient(135deg, #ff3333, #991b1b) !important;
+  border-radius: 24px !important;
+
+  color: white !important;
+  font-size: 36px !important;
+  font-weight: bold !important;
+
+  box-shadow: 0 0 45px rgba(239, 68, 68, 0.6) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+button,
+.watch-button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after,
+.watch-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255,255,255,0.18);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+button:hover::after,
+.watch-button:hover::after {
+  left: 120%;
+}
+.logo {
+  display: flex !important;
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 20px !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: #ef4444 !important;
+  color: #ffffff !important;
+
+  border-radius: 22px !important;
+  font-size: 38px !important;
+  font-weight: bold !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: rgba(255,255,255,0.18);
+  transform: skewX(-20deg);
+  transition: 0.6s;
+}
+
+button:hover::before {
+  left: 130%;
+}input {
+  height: 58px;
+  padding: 0 20px !important;
+  border: 1px solid rgba(239, 68, 68, 0.25) !important;
+  background: rgba(2, 6, 23, 0.9) !important;
+  transition: 0.3s ease !important;
+}
+
+input:hover {
+  border-color: rgba(239, 68, 68, 0.5) !important;
+}
+
+input:focus {
+  border-color: #ef4444 !important;
+  box-shadow:
+    0 0 0 4px rgba(239, 68, 68, 0.12),
+    0 0 25px rgba(239, 68, 68, 0.12) !important;
+  transform: translateY(-1px);
+}
