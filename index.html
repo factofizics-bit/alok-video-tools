@@ -1,0 +1,154 @@
+<div class="container">
+
+  <div class="top-badge">⚡ ALOK VIDEO TOOLS</div>
+
+  <div style="
+  width:80px;
+  height:80px;
+  margin:0 auto 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#ef4444;
+  border-radius:22px;
+  color:white;
+  font-size:38px;
+  font-weight:bold;
+">
+  ▶
+</div>
+    <h1>Preview. <span>Watch.</span> Enjoy.</h1>
+
+    <p>
+      Paste your YouTube link and instantly preview your video
+      in a clean and modern interface.
+    </p>
+  </div>
+
+  <div class="tool-card">
+
+    <div class="input-label">🎬 YouTube Video Link</div>
+
+    <input
+      type="text"
+      id="youtubeUrl"
+      placeholder="Paste YouTube link here..."
+    >
+
+    <button onclick="showVideo()">
+      ▶ Preview Video
+    </button>
+
+    <div id="result"></div>
+
+  </div>
+
+  <div class="features">
+
+    <div class="feature">
+      <div>⚡</div>
+      <h3>Fast Preview</h3>
+      <p>Quickly load your video.</p>
+    </div>
+
+    <div class="feature">
+      <div>🔗</div>
+      <h3>Easy to Use</h3>
+      <p>Just paste your link.</p>
+    </div>
+
+    <div class="feature">
+      <div>📱</div>
+      <h3>Mobile Friendly</h3>
+      <p>Works on every screen.</p>
+    </div>
+
+  </div>
+
+  <div class="info">
+
+    <h2>How It Works</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <span>01</span>
+        <h3>Copy Link</h3>
+        <p>YouTube video ka link copy karo.</p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h3>Paste Link</h3>
+        <p>Link ko upar wale box mein paste karo.</p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h3>Preview</h3>
+        <p>Preview Video button par click karo.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="about">
+
+    <h2>About Alok Video Tools</h2>
+
+    <p>
+      A simple and modern tool for previewing YouTube videos
+      directly from their links.
+    </p>
+
+  </div>
+
+  <footer>
+    © 2026 Alok Video Tools • Made with ❤️
+  </footer>
+
+</div>
+
+
+<script>
+function showVideo() {
+
+  const url = document
+    .getElementById("youtubeUrl")
+    .value
+    .trim();
+
+  const result = document.getElementById("result");
+
+  const match = url.match(
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/
+  );
+
+  if (!match) {
+    result.innerHTML =
+      "<p class='error'>❌ Valid YouTube link paste karo.</p>";
+    return;
+  }
+
+  const videoId = match[1];
+
+  result.innerHTML = `
+    <div class="video-box">
+
+      <iframe
+        src="https://www.youtube.com/embed/${videoId}"
+        allowfullscreen>
+      </iframe>
+
+      <a
+        href="https://www.youtube.com/watch?v=${videoId}"
+        target="_blank"
+        class="watch-button">
+        ▶ Watch on YouTube
+      </a>
+
+    </div>
+  `;
+}
+</script>
