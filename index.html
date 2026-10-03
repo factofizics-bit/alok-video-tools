@@ -145,6 +145,42 @@ simple and mobile-friendly interface.
 
 </div>
 <script>
+  function getThumbnail() {
+
+  const url = document.getElementById("thumbnailUrl").value.trim();
+  const result = document.getElementById("thumbnailResult");
+
+  const match = url.match(
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/
+  );
+
+  if (!match) {
+    result.innerHTML =
+      "<p class='error'>❌ Valid YouTube link paste karo.</p>";
+    return;
+  }
+
+  const videoId = match[1];
+
+  result.innerHTML = `
+    <div class="video-box">
+
+      <img
+        src="https://img.youtube.com/vi/${videoId}/maxresdefault.jpg"
+        style="width:100%; border-radius:15px;"
+        alt="YouTube Thumbnail"
+      >
+
+      <a
+        href="https://img.youtube.com/vi/${videoId}/maxresdefault.jpg"
+        target="_blank"
+        class="watch-button">
+        🖼️ Open Thumbnail
+      </a>
+
+    </div>
+  `;
+}
 function showVideo() {
 
   const url = document
