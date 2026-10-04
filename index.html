@@ -165,6 +165,9 @@ simple and mobile-friendly interface.
   const thumbnailUrl =
     `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
+  const downloadUrl =
+    `https://alok-thumb-dl-2026.factofizics.workers.dev/thumbnail?v=${videoId}`;
+
   result.innerHTML = `
     <div class="video-box">
 
@@ -174,16 +177,15 @@ simple and mobile-friendly interface.
         alt="YouTube Thumbnail"
       >
 
-      <button
-        onclick="downloadThumbnail('${thumbnailUrl}')">
+      <a
+        href="${downloadUrl}"
+        class="watch-button">
         ⬇️ Download Thumbnail
-      </button>
+      </a>
 
     </div>
   `;
 }
-
-async function downloadThumbnail(url) {
 
   try {
 
